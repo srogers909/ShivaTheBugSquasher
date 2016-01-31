@@ -13,15 +13,8 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
-      })
-      .state('game', {
-        url: '/game',
-        templateUrl: 'app/components/game/game.html',
-        controller: 'GameController',
-        controllerAs: 'game'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('home');
   }
-
 })();
