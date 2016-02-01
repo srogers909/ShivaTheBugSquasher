@@ -6,8 +6,8 @@ Make a solid reproduction of the original 8-bit Super Mario Bros. Nintendo game 
 
 ## Technologies Used
 * <a href="https://angularjs.org/">Angular</a>
-* Phaser.io
-* Gulp
+* <a href="http://phaser.io/">Phaser.io</a>
+* <a href="http://gulpjs.com/">Gulp</a>
 
 ### Installation
 Pull down a copy of the repository either through GIT or as a ZIP file.
