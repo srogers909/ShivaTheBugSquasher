@@ -5,9 +5,9 @@ A rebuild of the original Super Mario Bros. 8-bit Nintendo game using Super Pape
 Make a solid reproduction of the original 8-bit Super Mario Bros. Nintendo game with updated sprites.
 
 ## Technologies Used
-* <a href="https://angularjs.org/">Angular</a>
-* <a href="http://phaser.io/">Phaser.io</a>
-* <a href="http://gulpjs.com/">Gulp</a>
+* <a href="https://angularjs.org/">Angular</a> (MVC javascript framework)
+* <a href="http://phaser.io/">Phaser.io</a> (Javascript game engine)
+* <a href="http://gulpjs.com/">Gulp</a> (Automation runner)
 
 ### Installation
 Pull down a copy of the repository either through GIT or as a ZIP file.
