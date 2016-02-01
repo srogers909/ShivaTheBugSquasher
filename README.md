@@ -1,8 +1,15 @@
-# Shiva - The Bug Squasher
-A playground video game to learn to use Phaser.io.
+# Shiva - The Bug Squasher (CODENAME)
+A rebuild of the original Super Mario Bros. 8-bit Nintendo game using Super Paper Mario 64 sprites.
 
+## The Goal
+Make a solid reproduction of the original 8-bit Super Mario Bros. Nintendo game with updated sprites.
 
-## Installation
+## Technologies Used
+* <a href="https://angularjs.org/">Angular</a>
+* Phaser.io
+* Gulp
+
+### Installation
 Pull down a copy of the repository either through GIT or as a ZIP file.
 
 Run the following commands
