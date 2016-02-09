@@ -2,7 +2,7 @@
 A playground video game to learn to use Phaser.io.  Still in development.  Most work being done on the develop branch.
 
 ##Required
-Node.JS[https://nodejs.org]
+https://nodejs.org|Node.JS
 Yeoman
 Bower
 Gulp
