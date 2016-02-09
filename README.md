@@ -1,4 +1,4 @@
-# ShivaTheBugSquasher
+# Shiva - The Bug Squasher (CODENAME)
 A playground video game to learn to use Phaser.io.  
 
 **Still in development.**  
