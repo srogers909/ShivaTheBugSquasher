@@ -6,6 +6,7 @@
     this.ready = false;
   }
 
+
   Preloader.prototype = {
     preload: function () {
       this.asset = this.add.sprite(this.game.width * 0.5 - 110, this.game.height * 0.5 - 10, 'preloader');
@@ -19,10 +20,12 @@
     loadResources: function () {
       // load your assets here
       this.load.tilemap('fullmap', 'assets/tilemaps/level1.json', null, Phaser.Tilemap.TILED_JSON);
+
+      this.game.load.image('platformer', 'assets/sprites/platformer.png');
+      this.game.load.spritesheet('character', 'assets/sprites/character.png', 64, 64, 30);
     },
 
     create: function () {
-
     },
 
     update: function () {
