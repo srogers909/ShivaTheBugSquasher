@@ -3,8 +3,8 @@ A playground video game to learn to use Phaser.io.  Still in development.  Most 
 
 ##Required
 > [NodeJS](https://nodejs.org)
-> Yeoman
-> Bower
-> Gulp
+> [Yeoman](http://yeoman.io/)
+> [Bower](http://bower.io/)
+> [Gulp](http://gulpjs.com/)
 
-Uses the `generator-phaser` Yeoman generator.
+Uses the [generator-phaser](https://github.com/julien/generator-phaser) Yeoman generator.
