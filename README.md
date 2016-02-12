@@ -12,3 +12,7 @@ Most work being done on the develop branch.
 * [Gulp](http://gulpjs.com/)
 
 Uses the [generator-phaser](https://github.com/julien/generator-phaser) Yeoman generator.
+
+##Recommended Tools
+* [Tiled](http://www.mapeditor.org/) - Level creator.
+* [Leshy SpriteSheet Tool](http://www.leshylabs.com/apps/sstool/) - Spritesheet mapper
