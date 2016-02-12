@@ -1,44 +1,49 @@
-(function() {
-  'use strict';
+(function () {
+	'use strict';
 
-  function Preloader() {
-    this.asset = null;
-    this.ready = false;
-  }
+	function Preloader() {
+		this.asset = null;
+		this.ready = false;
+	}
 
 
-  Preloader.prototype = {
-    preload: function () {
-      this.asset = this.add.sprite(this.game.width * 0.5 - 110, this.game.height * 0.5 - 10, 'preloader');
-      this.load.setPreloadSprite(this.asset);
+	Preloader.prototype = {
+		preload: function preload() {
+			this.asset = this.add.sprite(this.game.width * 0.5 - 110, this.game.height * 0.5 - 10, 'preloader');
+			this.load.setPreloadSprite(this.asset);
+			this.loadResources();
+			this.ready = true;
+		},
 
-      // this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
-      this.loadResources();
-      this.ready = true;
-    },
+		loadResources: function loadResources() {
+			this.game.load.tilemap('fullmap', 'assets/sprites/level1.json', null, Phaser.Tilemap.TILED_JSON);
+			this.game.load.image('scene-img', 'assets/sprites/scene.png');
+			this.game.load.audio('music', 'assets/audio/smb-3-level-theme-1.mp3');
+			this.game.load.audio('game-over-music', 'assets/audio/game-over-alternate.mp3');
 
-    loadResources: function () {
-      // load your assets here
-      this.load.tilemap('fullmap', 'assets/tilemaps/level1.json', null, Phaser.Tilemap.TILED_JSON);
+			// mario load
+			//this.game.load.atlasJSONHash('mario', 'assets/sprites/spm-mario.png', 'assets/sprites/spm-mario.json');
+			this.game.load.atlasJSONHash('princess', 'assets/sprites/princess.png', 'assets/sprites/princess.json');
 
-      this.game.load.image('platformer', 'assets/sprites/platformer.png');
-      this.game.load.spritesheet('character', 'assets/sprites/character.png', 64, 64, 30);
-    },
+			this.game.load.atlasJSONHash('goomba', 'assets/sprites/goomba.png', 'assets/sprites/goomba.json');
 
-    create: function () {
-    },
+			// koopa load
+			//this.game.load.atlasJSONHash('koopa', 'assets/sprites/koopa.png', 'assets/sprites/koopa.json');
+		},
 
-    update: function () {
-      // if (!!this.ready) {
-        this.game.state.start('menu');
-      // }
-    },
+		create: function create() {},
 
-    onLoadComplete: function () {
-      // this.ready = true;
-    }
-  };
+		update: function update() {
+			//if (!this.ready) {
+				this.game.state.start('menu');
+			//}
+		},
 
-  window['shivathebugsquasher'] = window['shivathebugsquasher'] || {};
-  window['shivathebugsquasher'].Preloader = Preloader;
+		onLoadComplete: function onLoadComplete() {
+			//this.ready = true;
+		}
+	};
+
+	window['shivathebugsquasher'] = window['shivathebugsquasher'] || {};
+	window['shivathebugsquasher'].Preloader = Preloader;
 }());
