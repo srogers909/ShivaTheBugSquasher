@@ -1,34 +1,36 @@
 (function () {
-  'use strict';
+	'use strict';
 
-  function Boot() {}
+	function Boot() {
+	}
 
-  Boot.prototype = {
-    preload: function () {
-      this.load.image('preloader', 'assets/preloader.gif');
-    },
+	Boot.prototype = {
+		preload: function preload() {
+			this.load.image('preloader', 'assets/preloader.gif');
+		},
 
-    create: function () {
-      // configure game
-      this.game.input.maxPointers = 1;
+		create: function create() {
+			// configure game
+			this.game.input.maxPointers = 1;
 
-      if (this.game.device.desktop) {
-        this.game.scale.pageAlignHorizontally = true;
-      } else {
-        this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        this.game.scale.minWidth =  640;
-        this.game.scale.minHeight = 480;
-        this.game.scale.maxWidth = 640;
-        this.game.scale.maxHeight = 480;
-        this.game.scale.forceOrientation(true);
-        this.game.scale.pageAlignHorizontally = true;
-        this.game.scale.setScreenSize(true);
-      }
-      this.game.state.start('preloader');
-    }
-  };
+			if (this.game.device.desktop) {
+				this.game.scale.pageAlignHorizontally = true;
+				//this.game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;
+			} else {
+				this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+				this.game.scale.minWidth = 640;
+				this.game.scale.minHeight = 480;
+				this.game.scale.maxWidth = 640;
+				this.game.scale.maxHeight = 480;
+				this.game.scale.forceOrientation(true);
+				this.game.scale.pageAlignHorizontally = true;
+				this.game.scale.setScreenSize(true);
+			}
+			this.game.state.start('preloader');
+		}
+	};
 
-  window['shivathebugsquasher'] = window['shivathebugsquasher'] || {};
-  window['shivathebugsquasher'].Boot = Boot;
+	window['shivathebugsquasher'] = window['shivathebugsquasher'] || {};
+	window['shivathebugsquasher'].Boot = Boot;
 }());
 
