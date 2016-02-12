@@ -16,3 +16,6 @@ Uses the [generator-phaser](https://github.com/julien/generator-phaser) Yeoman g
 ##Recommended Tools
 * [Tiled](http://www.mapeditor.org/) - Level creator.
 * [Leshy SpriteSheet Tool](http://www.leshylabs.com/apps/sstool/) - Spritesheet mapper
+
+##How to Run the Game
+Execute `gulp connect`.  The default URL is "localhost:9000".
