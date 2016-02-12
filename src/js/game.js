@@ -31,11 +31,11 @@
 			this.input.onDown.add(this.onInputDown, this);
 
 			this.player = this.game.add.sprite(100, 0, 'princess');
-			this.enemy = this.game.add.sprite(900, 500, 'goomba');
+			this.enemy = this.game.add.sprite(900, 550, 'goomba');
 			this.game.physics.enable(this.player, Phaser.Physics.ARCADE);
 			this.game.physics.enable(this.enemy, Phaser.Physics.ARCADE);
 
-			this.player.animations.add('walk', ['sprite14'], 1, true);
+			this.player.animations.add('walk', [12, 13, 14, 15], 5, true);
 			this.player.anchor.setTo(0.5, 0.5);
 			this.player.scale.x *= -1; // turn right
 			this.player.body.bounce.y = 0.2;
@@ -47,6 +47,7 @@
 			this.enemy.animations.add('walk', ['sprite0', 'sprite1', 'sprite2'], 5, true);
 			this.enemy.animations.play('walk');
 			this.enemy.body.velocity.x = -100;
+			this.enemy.body.collideWorldBounds = true;
 
 			this.cursors = this.game.input.keyboard.createCursorKeys();
 			this.jumpButton = this.game.input.keyboard.addKey(Phaser.Keyboard.UP);
@@ -66,10 +67,18 @@
 				this.player.body.velocity.x = this.hVelocity;
 				this.player.scale.x = -1;
 				this.player.animations.play('walk');
+			} else {
+				this.player.body.velocity.x = 0;
+				this.player.animations.stop();
 			}
 
 			if (this.jumpButton.isDown && this.player.body.onFloor()) {
 				this.player.body.velocity.y = this.vVelocity;
+			}
+
+			if (this.enemy.body.velocity.x === 0) {
+				this.enemy.scale.x = -1;
+				this.enemy.body.velocity.x = 310;
 			}
 		},
 
